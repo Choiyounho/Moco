@@ -1,6 +1,16 @@
 object Kotlin {
     private const val VERSION = "1.8.20"
     const val GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VERSION"
+    const val KOTLIN_SERIALIZATION = "org.jetbrains.kotlin:kotlin-serialization:$VERSION"
+}
+
+object KotlinX {
+    private const val CONVERTER_VERSION = "1.0.0"
+    private const val JSON_VERSION = "1.5.1"
+
+    const val KOTLINX_SERIALIZATION =
+        "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$CONVERTER_VERSION"
+    const val KOTLINX_SERIALIZATION_JSON = "org.jetbrains.kotlinx:kotlinx-serialization-json:$JSON_VERSION"
 }
 
 object Android {
@@ -29,7 +39,8 @@ object AndroidX {
     object Lifecycle {
         private const val VERSION = "2.5.1"
         const val VIEWMODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:$VERSION"
-        const val VIEWMODEL_SAVEDSTATE = "androidx.lifecycle:lifecycle-viewmodel-savedstate:$VERSION"
+        const val VIEWMODEL_SAVEDSTATE =
+            "androidx.lifecycle:lifecycle-viewmodel-savedstate:$VERSION"
         const val RUNTIME = "androidx.lifecycle:lifecycle-runtime-ktx:$VERSION"
         const val PROCESS = "androidx.lifecycle:lifecycle-process:$VERSION"
 
@@ -91,15 +102,5 @@ object SquareUp {
     object Retrofit2 {
         private const val VERSION = "2.9.0"
         const val CORE = "com.squareup.retrofit2:retrofit:$VERSION"
-        const val GSON = "com.squareup.retrofit2:converter-gson:$VERSION"
-        const val RXJAVA2 = "com.squareup.retrofit2:adapter-rxjava2:2.8.1"
-    }
-
-    object Moshi {
-        private const val VERSION = "1.13.0"
-        const val MOSHI = "com.squareup.moshi:moshi:$VERSION"
-        const val MOSHI_KOTLIN = "com.squareup.moshi:moshi-kotlin:$VERSION"
-        const val MOSHI_ADAPTERS = "com.squareup.moshi:moshi-adapters:$VERSION"
-        const val MOSHI_KOTLIN_CODEGEN = "com.squareup.moshi:moshi-kotlin-codegen:$VERSION"
     }
 }

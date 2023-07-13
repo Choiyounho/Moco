@@ -1,6 +1,7 @@
 plugins {
     id(Plugin.Android_Application)
     id(Plugin.JETBRAINS_KOTLIN_ANDROID)
+    id(Plugin.KOTLINX_SERIALIZATION)
 }
 
 android {
@@ -38,9 +39,18 @@ dependencies {
 
     implementation(AndroidX.CORE)
     implementation(AndroidX.AppCompat.APP_COMPAT)
-    implementation(Google.METERIAL)
     implementation(AndroidX.ConstraintLayout.CONSTRAINT_LAYOUT)
+
+    implementation(Google.METERIAL)
+
     testImplementation(Junit.JUNIT)
     androidTestImplementation(AndroidX.Test.Ext.JUNIT)
     androidTestImplementation(AndroidX.Test.Espresso.ESPRESSO_CORE)
+
+    implementation(Kotlin.KOTLIN_SERIALIZATION)
+    implementation(KotlinX.KOTLINX_SERIALIZATION)
+    implementation(KotlinX.KOTLINX_SERIALIZATION_JSON)
+
+    implementation(SquareUp.OkHttp3.CORE)
+    implementation(SquareUp.OkHttp3.LOGGING_INTERCEPTOR)
 }
