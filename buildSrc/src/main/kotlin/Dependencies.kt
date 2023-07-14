@@ -2,6 +2,7 @@ object Kotlin {
     private const val VERSION = "1.8.20"
     const val GRADLE_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VERSION"
     const val KOTLIN_SERIALIZATION = "org.jetbrains.kotlin:kotlin-serialization:$VERSION"
+    const val KOTLIN_STDLIB = "org.jetbrains.kotlin:kotlin-stdlib:$VERSION"
 }
 
 object KotlinX {
@@ -86,10 +87,17 @@ object AndroidX {
 object Junit {
     private const val VERSION = "4.13.2"
     const val JUNIT = "junit:junit:$VERSION"
+
+    object Jupiter {
+        private const val VERSION = "5.8.2"
+        const val JUPITER = "org.junit.jupiter:junit-jupiter:$VERSION"
+    }
+
 }
 
 object Google {
     const val METERIAL = "com.google.android.material:material:1.9.0"
+    const val TRUTH = "com.google.truth:truth:1.1.3"
 }
 
 object SquareUp {
