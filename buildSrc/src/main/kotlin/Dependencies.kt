@@ -98,6 +98,13 @@ object Junit {
 object Google {
     const val METERIAL = "com.google.android.material:material:1.9.0"
     const val TRUTH = "com.google.truth:truth:1.1.3"
+
+    object Hilt {
+        const val VERSION = "2.44"
+        const val HILT_ANDROID_GRADLE_PLUGIN = "com.google.dagger:hilt-android-gradle-plugin:$VERSION"
+        const val HILT_ANDROID = "com.google.dagger:hilt-android:$VERSION"
+        const val HILT_COMPILER = "com.google.dagger:hilt-compiler:$VERSION"
+    }
 }
 
 object SquareUp {

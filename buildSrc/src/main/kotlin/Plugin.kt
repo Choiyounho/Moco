@@ -6,4 +6,8 @@ object Plugin {
 
     const val KOTLINX_SERIALIZATION = "kotlinx-serialization"
     const val KOTLIN = "kotlin"
+
+    const val DAGGER_HILT = "dagger.hilt.android.plugin"
+
+    const val KAPT = "kapt"
 }

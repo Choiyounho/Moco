@@ -1,6 +1,10 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id(Plugin.DAGGER_HILT)
+    kotlin(Plugin.KAPT)
 }
 
 android {
@@ -25,20 +29,34 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
 dependencies {
+    implementation(project(":domain"))
+    implementation(AndroidX.CORE)
+    implementation(AndroidX.AppCompat.APP_COMPAT)
+    implementation(AndroidX.ConstraintLayout.CONSTRAINT_LAYOUT)
 
-    implementation("androidx.core:core-ktx:1.8.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.5")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    implementation(Google.METERIAL)
+
+    testImplementation(Junit.JUNIT)
+    androidTestImplementation(AndroidX.Test.Ext.JUNIT)
+    androidTestImplementation(AndroidX.Test.Espresso.ESPRESSO_CORE)
+
+    implementation(Kotlin.KOTLIN_SERIALIZATION)
+    implementation(KotlinX.KOTLINX_SERIALIZATION)
+    implementation(KotlinX.KOTLINX_SERIALIZATION_JSON)
+
+    implementation(SquareUp.OkHttp3.CORE)
+    implementation(SquareUp.OkHttp3.LOGGING_INTERCEPTOR)
+
+
+    implementation(Google.Hilt.HILT_ANDROID)
+    kapt(Google.Hilt.HILT_COMPILER)
 }

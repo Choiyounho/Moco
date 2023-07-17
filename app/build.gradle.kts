@@ -1,7 +1,11 @@
+import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
+
 plugins {
     id(Plugin.Android_Application)
     id(Plugin.JETBRAINS_KOTLIN_ANDROID)
     id(Plugin.KOTLINX_SERIALIZATION)
+    id(Plugin.DAGGER_HILT)
+    kotlin(Plugin.KAPT)
 }
 
 android {
@@ -27,15 +31,17 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility(JavaVersion.VERSION_1_8)
-        targetCompatibility(JavaVersion.VERSION_1_8)
+        sourceCompatibility(JavaVersion.VERSION_17)
+        targetCompatibility(JavaVersion.VERSION_17)
     }
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 
 dependencies {
+    implementation(project(":domain"))
+    implementation(project(":data"))
 
     implementation(AndroidX.CORE)
     implementation(AndroidX.AppCompat.APP_COMPAT)
@@ -47,10 +53,6 @@ dependencies {
     androidTestImplementation(AndroidX.Test.Ext.JUNIT)
     androidTestImplementation(AndroidX.Test.Espresso.ESPRESSO_CORE)
 
-    implementation(Kotlin.KOTLIN_SERIALIZATION)
-    implementation(KotlinX.KOTLINX_SERIALIZATION)
-    implementation(KotlinX.KOTLINX_SERIALIZATION_JSON)
-
-    implementation(SquareUp.OkHttp3.CORE)
-    implementation(SquareUp.OkHttp3.LOGGING_INTERCEPTOR)
+    implementation(Google.Hilt.HILT_ANDROID)
+    kapt(Google.Hilt.HILT_COMPILER)
 }
