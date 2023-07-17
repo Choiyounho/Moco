@@ -3,9 +3,10 @@ import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 plugins {
     id(Plugin.Android_Application)
     id(Plugin.JETBRAINS_KOTLIN_ANDROID)
-    id(Plugin.KOTLINX_SERIALIZATION)
     id(Plugin.DAGGER_HILT)
     kotlin(Plugin.KAPT)
+    id(Plugin.KOTLINX_SERIALIZATION)
+
 }
 
 android {
@@ -55,4 +56,20 @@ dependencies {
 
     implementation(Google.Hilt.HILT_ANDROID)
     kapt(Google.Hilt.HILT_COMPILER)
+
+
+    implementation(Kotlin.KOTLIN_SERIALIZATION)
+    implementation(KotlinX.KOTLINX_SERIALIZATION)
+    implementation(KotlinX.KOTLINX_SERIALIZATION_JSON)
+
+    implementation(SquareUp.OkHttp3.CORE)
+    implementation(SquareUp.OkHttp3.LOGGING_INTERCEPTOR)
+    implementation(SquareUp.Retrofit2.CORE)
+    implementation(Kotlin.KOTLIN_SERIALIZATION)
+    implementation(KotlinX.KOTLINX_SERIALIZATION)
+    implementation(KotlinX.KOTLINX_SERIALIZATION_JSON)
+
+    implementation(SquareUp.OkHttp3.CORE)
+    implementation(SquareUp.OkHttp3.LOGGING_INTERCEPTOR)
+    implementation(SquareUp.Retrofit2.CORE)
 }

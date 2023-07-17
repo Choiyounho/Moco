@@ -12,6 +12,7 @@ object KotlinX {
     const val KOTLINX_SERIALIZATION =
         "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$CONVERTER_VERSION"
     const val KOTLINX_SERIALIZATION_JSON = "org.jetbrains.kotlinx:kotlinx-serialization-json:$JSON_VERSION"
+    const val KOTLINX_SERIALIZATION_RUNTIME = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0"
 }
 
 object Android {
@@ -109,7 +110,7 @@ object Google {
 
 object SquareUp {
     object OkHttp3 {
-        private const val VERSION = "4.9.3"
+        private const val VERSION = "4.10.0"
         const val CORE = "com.squareup.okhttp3:okhttp:$VERSION"
         const val LOGGING_INTERCEPTOR = "com.squareup.okhttp3:logging-interceptor:$VERSION"
     }
