@@ -1,4 +1,7 @@
 package com.soten.moco
 
-class MocoApp {
-}
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class MocoApp : Application()
