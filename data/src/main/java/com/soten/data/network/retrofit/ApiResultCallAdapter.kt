@@ -1,11 +1,11 @@
-package com.soten.moco.network.retrofit
+package com.soten.data.network.retrofit
 
-import com.soten.moco.network.ApiResult
+import com.soten.data.network.ApiResult
 import retrofit2.Call
 import retrofit2.CallAdapter
 import java.lang.reflect.Type
 
-class ApiResultCallAdapter<R : ApiResult<*>>(
+internal class ApiResultCallAdapter<R : ApiResult<*>>(
     private val responseType: Type
 ) : CallAdapter<R, ApiCall<R>> {
 

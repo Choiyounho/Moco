@@ -40,6 +40,7 @@ android {
 
 dependencies {
     implementation(project(":domain"))
+
     implementation(AndroidX.CORE)
     implementation(AndroidX.AppCompat.APP_COMPAT)
     implementation(AndroidX.ConstraintLayout.CONSTRAINT_LAYOUT)

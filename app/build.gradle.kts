@@ -72,4 +72,12 @@ dependencies {
     implementation(SquareUp.OkHttp3.CORE)
     implementation(SquareUp.OkHttp3.LOGGING_INTERCEPTOR)
     implementation(SquareUp.Retrofit2.CORE)
+
+    implementation(AndroidX.Lifecycle.LIFECYCLE_RUNTIME_KTX)
+    implementation(AndroidX.Lifecycle.PROCESS)
+    implementation(AndroidX.Lifecycle.RUNTIME)
+    implementation(AndroidX.Lifecycle.VIEWMODEL)
+    implementation(AndroidX.Lifecycle.VIEWMODEL_SAVEDSTATE)
+
+    implementation(AndroidX.Activity.ACTIVITY_KTX)
 }

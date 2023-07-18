@@ -1,4 +1,4 @@
-package com.soten.moco.network.response
+package com.soten.data.network.response
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

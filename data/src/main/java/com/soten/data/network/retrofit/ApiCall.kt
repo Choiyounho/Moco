@@ -1,6 +1,6 @@
-package com.soten.moco.network.retrofit
+package com.soten.data.network.retrofit
 
-import com.soten.moco.network.ApiResult
+import com.soten.data.network.ApiResult
 import okhttp3.Request
 import okio.Timeout
 import retrofit2.Call
@@ -8,7 +8,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.io.IOException
 
-class ApiCall<T: ApiResult<*>>(
+internal class ApiCall<T : ApiResult<*>>(
     private val call: Call<T>
 ) : Call<T> {
 
@@ -31,15 +31,24 @@ class ApiCall<T: ApiResult<*>>(
     override fun enqueue(callback: Callback<T>) {
         call.enqueue(object : Callback<T> {
             override fun onResponse(call: Call<T>, response: Response<T>) {
-                val newResponse: Response<T> = Response.success(response.body())
-                callback.onResponse(
-                    this@ApiCall,
-                    newResponse
-                )
+                if (response.isSuccessful) {
+                    val newResponse: Response<T> = Response.success(response.body())
+                    callback.onResponse(
+                        this@ApiCall,
+                        newResponse
+                    )
+                    return
+                }
+
+                val code = response.code()
+                val message = response.message()
+
+                val networkResponse = ApiResult.Failure(code, message) as T
+                callback.onResponse(this@ApiCall, Response.success(networkResponse))
             }
 
             override fun onFailure(call: Call<T>, t: Throwable) {
-                val networkResponse:T = when (t) {
+                val networkResponse: T = when (t) {
                     is IOException -> ApiResult.NetworkError(t)
                     else -> ApiResult.Unexpected(t)
                 } as T

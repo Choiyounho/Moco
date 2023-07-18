@@ -1,4 +1,4 @@
-package com.soten.moco.network
+package com.soten.data.network
 
 import kotlinx.serialization.Serializable
 import okio.IOException

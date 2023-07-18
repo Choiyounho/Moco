@@ -1,20 +1,18 @@
-package com.soten.moco.network.retrofit
+package com.soten.data.network.retrofit
 
-import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import kotlinx.serialization.json.Json
-import okhttp3.MediaType.Companion.toMediaType
+import com.soten.data.network.retrofit.Url.UPBIT_URL
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 
-object RetrofitFactory {
+internal object RetrofitFactory {
 
     fun create(): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://api.upbit.com/")
+            .baseUrl(UPBIT_URL)
             .client(createOkhttpClient())
             .addCallAdapterFactory(ApiResultCallAdapterFactory())
-            .addConverterFactory(Fac.create())
+            .addConverterFactory(KotlinxConverterFactory.create())
             .build()
     }
 

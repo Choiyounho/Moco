@@ -1,4 +1,4 @@
-package com.soten.moco.network.retrofit
+package com.soten.data.network.retrofit
 
 internal object Url {
 
