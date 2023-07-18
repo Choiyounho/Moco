@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id(Plugin.KOTLINX_SERIALIZATION)
     id(Plugin.DAGGER_HILT)
     kotlin(Plugin.KAPT)
 }
@@ -55,7 +56,6 @@ dependencies {
 
     implementation(SquareUp.OkHttp3.CORE)
     implementation(SquareUp.OkHttp3.LOGGING_INTERCEPTOR)
-
 
     implementation(Google.Hilt.HILT_ANDROID)
     kapt(Google.Hilt.HILT_COMPILER)
