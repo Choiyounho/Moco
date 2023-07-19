@@ -4,7 +4,7 @@ import kotlinx.serialization.Serializable
 import okio.IOException
 
 @Serializable
-sealed class ApiResult<out T> {
+internal sealed class ApiResult<out T> {
 
     @Serializable
     data class Success<T>(val value: T?) : ApiResult<T>()
