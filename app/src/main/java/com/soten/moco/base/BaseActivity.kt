@@ -19,10 +19,12 @@ open class BaseActivity<DB : ViewDataBinding>(
 
         initViews()
         bindViews()
+        observeData()
     }
-
+    
     open fun initViews() = Unit
     open fun bindViews() = Unit
+    open fun observeData() = Unit
 
     private fun setBinding() {
         binding = DataBindingUtil.setContentView(this, layoutRes)
