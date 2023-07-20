@@ -21,7 +21,7 @@ open class BaseActivity<DB : ViewDataBinding>(
         bindViews()
         observeData()
     }
-    
+
     open fun initViews() = Unit
     open fun bindViews() = Unit
     open fun observeData() = Unit
