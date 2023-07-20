@@ -20,7 +20,7 @@ internal object RetrofitFactory {
         return OkHttpClient.Builder()
             .addInterceptor(
                 HttpLoggingInterceptor()
-                    .setLevel(HttpLoggingInterceptor.Level.BODY)
+                    .setLevel(HttpLoggingInterceptor.Level.BODY),
             )
             .build()
     }

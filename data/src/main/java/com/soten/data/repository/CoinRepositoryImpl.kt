@@ -8,7 +8,7 @@ import com.soten.domain.repository.CoinRepository
 import javax.inject.Inject
 
 internal class CoinRepositoryImpl @Inject constructor(
-    private val upbitApi: UpbitApi
+    private val upbitApi: UpbitApi,
 ) : CoinRepository {
 
     override suspend fun fetchAllCoin(): Result<List<Coin>> {

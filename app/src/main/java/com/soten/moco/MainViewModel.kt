@@ -13,7 +13,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val coinRepository: CoinRepository
+    private val coinRepository: CoinRepository,
 ) : ViewModel() {
 
     private val _coins = MutableStateFlow<List<Coin>>(emptyList())

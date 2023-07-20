@@ -67,7 +67,6 @@ object AndroidX {
         const val CORE_KTX = "androidx.test:core-ktx:1.7.0"
     }
 
-
     object Navigation {
         private const val VERSION = "2.4.2"
         const val FRAGMENT = "androidx.navigation:navigation-fragment-ktx:$VERSION"
@@ -92,7 +91,6 @@ object Junit {
         private const val VERSION = "5.8.2"
         const val JUPITER = "org.junit.jupiter:junit-jupiter:$VERSION"
     }
-
 }
 
 object Google {
