@@ -59,4 +59,12 @@ dependencies {
 
     implementation(Google.Hilt.HILT_ANDROID)
     kapt(Google.Hilt.HILT_COMPILER)
+
+    implementation(AndroidX.Lifecycle.LIFECYCLE_RUNTIME_KTX)
+    implementation(AndroidX.Lifecycle.PROCESS)
+    implementation(AndroidX.Lifecycle.RUNTIME)
+    implementation(AndroidX.Lifecycle.VIEWMODEL)
+    implementation(AndroidX.Lifecycle.VIEWMODEL_SAVEDSTATE)
+
+    implementation(AndroidX.Activity.ACTIVITY_KTX)
 }
