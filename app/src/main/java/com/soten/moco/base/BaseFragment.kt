@@ -13,7 +13,7 @@ open class BaseFragment<DB : ViewDataBinding>(
     @LayoutRes private val layoutRes: Int,
 ) : Fragment() {
 
-    protected var _binding: DB? = null
+    private var _binding: DB? = null
     protected val binding get() = _binding!!
 
     override fun onCreateView(
