@@ -1,20 +1,19 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
 
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    id(Plugin.ANDROID_LIBERARY)
+    id(Plugin.JETBRAINS_KOTLIN_ANDROID)
     id(Plugin.KOTLINX_SERIALIZATION)
     id(Plugin.DAGGER_HILT)
     kotlin(Plugin.KAPT)
 }
 
 android {
-    namespace = "com.soten.data"
-    compileSdk = 33
+    namespace = Project.NAME_SPACE
+    compileSdk = Project.COMPILE_SDK
 
     defaultConfig {
-        minSdk = 26
-        targetSdk = 33
+        minSdk = Project.MIN_SDK
+        targetSdk = Project.TARGET_SDK
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")

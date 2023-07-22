@@ -1,5 +1,6 @@
 object Plugin {
     const val Android_Application = "com.android.application"
+    const val ANDROID_LIBERARY = "com.android.library"
     const val ANDROID = "android"
 
     const val JETBRAINS_KOTLIN_ANDROID = "org.jetbrains.kotlin.android"
